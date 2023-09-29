@@ -13,6 +13,8 @@
 - Place and destroy buildings
 - AI Pathing
 - Bit of a tutorial?
+- Super simple UI
+- Complex systems maybe?
 
 ## Resources
 - Wood

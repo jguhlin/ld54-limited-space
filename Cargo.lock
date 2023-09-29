@@ -590,37 +590,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "bevy_eventlistener"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "233f729a5a2c7182f89b17c5d603cd604d095ee68d22c81b29be3cd30324f77d"
-dependencies = [
- "bevy_eventlistener_core",
- "bevy_eventlistener_derive",
-]
-
-[[package]]
-name = "bevy_eventlistener_core"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ccd344e21cb61878a24169bff3f2e0bc5584df77b06732b5223a13a96a92dfe9"
-dependencies = [
- "bevy",
-]
-
-[[package]]
-name = "bevy_eventlistener_derive"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "407110082f2a861eb198c254226aa4a24c239fcff235f2aec41b0b0db5e8937f"
-dependencies = [
- "bevy_eventlistener_core",
- "proc-macro2",
- "quote",
- "syn 2.0.37",
-]
-
-[[package]]
 name = "bevy_gizmos"
 version = "0.11.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -798,33 +767,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "bevy_mod_picking"
-version = "0.15.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9ce0837727f451ec62dad98a7bd35a8ff929e5a148bb0044122aba02683c09df"
-dependencies = [
- "bevy",
- "bevy_eventlistener",
- "bevy_picking_core",
- "bevy_picking_highlight",
- "bevy_picking_input",
- "bevy_picking_raycast",
- "bevy_picking_selection",
- "bevy_picking_sprite",
- "bevy_picking_ui",
-]
-
-[[package]]
-name = "bevy_mod_raycast"
-version = "0.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8cbc448fc8a8817cbf225f58a58ab45ab87e9d335b66c4c1674fba45f062c822"
-dependencies = [
- "bevy",
- "crossbeam-channel",
-]
-
-[[package]]
 name = "bevy_pbr"
 version = "0.11.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -845,81 +787,6 @@ dependencies = [
  "bytemuck",
  "naga_oil",
  "radsort",
-]
-
-[[package]]
-name = "bevy_picking_core"
-version = "0.15.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "37b10f159071accb3f17f86b70a2cafed27f96a828f155721d8f82706d5a65af"
-dependencies = [
- "bevy",
- "bevy_eventlistener",
-]
-
-[[package]]
-name = "bevy_picking_highlight"
-version = "0.15.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9127248f32843064b9d58d7126e0155378b7321b80acc53e8aafb0e3a61f2219"
-dependencies = [
- "bevy",
- "bevy_picking_core",
- "bevy_picking_input",
- "bevy_picking_selection",
-]
-
-[[package]]
-name = "bevy_picking_input"
-version = "0.15.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c1cc165dccadf85856cd713f1dabf5c845c7b6fd56e2c901a53f69f3693c5149"
-dependencies = [
- "bevy",
- "bevy_picking_core",
- "bevy_picking_selection",
-]
-
-[[package]]
-name = "bevy_picking_raycast"
-version = "0.15.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7f53ba9aee1a3a48e016f4d35b066cca75d2ddd983ad2a0e14ecf92956501a3c"
-dependencies = [
- "bevy",
- "bevy_mod_raycast",
- "bevy_picking_core",
-]
-
-[[package]]
-name = "bevy_picking_selection"
-version = "0.15.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "61980e57b09ff29b52c2910ba5b4e9bcfe8f9481931e62fd277a16b6ec3390f2"
-dependencies = [
- "bevy",
- "bevy_eventlistener",
- "bevy_picking_core",
-]
-
-[[package]]
-name = "bevy_picking_sprite"
-version = "0.15.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "179b555e09296ac77280e0c283c4e0f380dc64ddd5a02b5bd1773c00a6a3b9c5"
-dependencies = [
- "bevy",
- "bevy_picking_core",
-]
-
-[[package]]
-name = "bevy_picking_ui"
-version = "0.15.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1533a7723939a1dfad933da76a4cfb0d37eb15abd64519c0db2477f04de1ee8b"
-dependencies = [
- "bevy",
- "bevy_picking_core",
 ]
 
 [[package]]
@@ -1693,12 +1560,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "either"
-version = "1.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a26ae43d7bcc3b814de94796a5e736d4029efb0ee900c12e2d54c993ad1a1e07"
-
-[[package]]
 name = "emath"
 version = "0.22.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2158,12 +2019,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "heck"
-version = "0.4.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "95505c38b4572b2d910cecb0281560f54b440a19336cbbcb27bf6ce6adc6f5a8"
-
-[[package]]
 name = "hermit-abi"
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2309,15 +2164,6 @@ dependencies = [
  "hermit-abi",
  "rustix",
  "windows-sys 0.48.0",
-]
-
-[[package]]
-name = "itertools"
-version = "0.11.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b1c173a5686ce8bfa551b3563d0c2170bf24ca44da99c7ca4bfdab5418c3fe57"
-dependencies = [
- "either",
 ]
 
 [[package]]
@@ -2475,24 +2321,16 @@ dependencies = [
  "bevy_asset_loader",
  "bevy_egui",
  "bevy_kira_audio",
- "bevy_mod_picking",
  "bevy_prng",
  "bevy_rand",
  "flexi_logger",
- "itertools",
  "log",
- "mimalloc",
- "num-derive 0.4.0",
- "num-traits",
- "once_cell",
  "rand",
  "rand_core",
  "rand_distr",
  "serde",
  "serde_yaml",
- "strum",
- "strum_macros",
- "twox-hash",
+ "xxhash-rust",
 ]
 
 [[package]]
@@ -2526,16 +2364,6 @@ name = "libm"
 version = "0.2.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f7012b1bbb0719e1097c47611d3898568c546d597c2e74d66f6087edd5233ff4"
-
-[[package]]
-name = "libmimalloc-sys"
-version = "0.1.35"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3979b5c37ece694f1f5e51e7ecc871fdb0f517ed04ee45f88d15d6d553cb9664"
-dependencies = [
- "cc",
- "libc",
-]
 
 [[package]]
 name = "linux-raw-sys"
@@ -2613,15 +2441,6 @@ dependencies = [
  "foreign-types",
  "log",
  "objc",
-]
-
-[[package]]
-name = "mimalloc"
-version = "0.1.39"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fa01922b5ea280a911e323e4d2fd24b7fe5cc4042e0d2cda3c40775cdc4bdc9c"
-dependencies = [
- "libmimalloc-sys",
 ]
 
 [[package]]
@@ -2815,17 +2634,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "num-derive"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9e6a0fd4f737c707bd9086cc16c925f294943eb62eb71499e9fd4cf71f8b9f4e"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.37",
-]
-
-[[package]]
 name = "num-integer"
 version = "0.1.45"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2981,7 +2789,7 @@ dependencies = [
  "jni 0.20.0",
  "ndk",
  "ndk-context",
- "num-derive 0.3.3",
+ "num-derive",
  "num-traits",
  "oboe-sys",
 ]
@@ -3360,12 +3168,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "rustversion"
-version = "1.0.14"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7ffc183a10b4478d04cbbbfc96d0873219d962dd5accaff2ffbd4ceb7df837f4"
-
-[[package]]
 name = "ruzstd"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3519,25 +3321,6 @@ name = "str-buf"
 version = "1.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9e08d8363704e6c71fc928674353e6b7c23dcea9d82d7012c8faf2a3a025f8d0"
-
-[[package]]
-name = "strum"
-version = "0.25.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "290d54ea6f91c969195bdbcd7442c8c2a2ba87da8bf60a7ee86a235d4bc1e125"
-
-[[package]]
-name = "strum_macros"
-version = "0.25.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ad8d03b598d3d0fff69bf533ee3ef19b8eeb342729596df84bcc7e1f96ec4059"
-dependencies = [
- "heck",
- "proc-macro2",
- "quote",
- "rustversion",
- "syn 2.0.37",
-]
 
 [[package]]
 name = "svg_fmt"
@@ -3852,7 +3635,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "97fee6b57c6a41524a810daee9286c02d7752c4253064d0b05472833a438f675"
 dependencies = [
  "cfg-if",
- "rand",
  "static_assertions",
 ]
 
@@ -4482,3 +4264,9 @@ name = "xml-rs"
 version = "0.8.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0fcb9cbac069e033553e8bb871be2fbdffcab578eb25bd0f7c508cedc6dcd75a"
+
+[[package]]
+name = "xxhash-rust"
+version = "0.8.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9828b178da53440fa9c766a3d2f73f7cf5d0ac1fe3980c1e5018d899fd19e07b"
