@@ -1,0 +1,6 @@
+[book]
+authors = ["jguhlin"]
+language = "en"
+multilingual = false
+src = "src"
+title = "LDJam 54 - Limited Space"
