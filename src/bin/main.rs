@@ -1,18 +1,23 @@
 use bevy::prelude::*;
+use bevy_inspector_egui::quick::WorldInspectorPlugin;
+use bevy_prng::*;
 use bevy_rand::prelude::*;
 use rand_core::RngCore;
-use bevy_prng::*;
 use xxhash_rust::const_xxh3::xxh3_64 as const_xxh3;
 use xxhash_rust::xxh3::xxh3_64;
-use bevy_inspector_egui::quick::WorldInspectorPlugin;
 
+use ld54gamelib::map::MapPlugin;
+use ld54gamelib::menu::MenuPlugin;
 use ld54gamelib::*;
 
 // https://ludumdare.com/resources/guides/embedding/
 
 fn main() {
-
-    let seed: [u8; 16] = "IJNM543980uadsfa".as_bytes().try_into().expect("Incorrect length");
+    // TODO: Let the seed be user definable...
+    let seed: [u8; 16] = "IJNM543980uadsfa"
+        .as_bytes()
+        .try_into()
+        .expect("Incorrect length");
 
     App::new()
         .insert_resource(Msaa::Off)
@@ -32,19 +37,16 @@ fn main() {
         }))
         .add_plugins(EntropyPlugin::<Xoshiro128StarStar>::with_seed(seed))
         .add_plugins(WorldInspectorPlugin::new())
+        .add_state::<GameState>()
+        .insert_resource(Volume::default())
+        .insert_resource(Seed::default())
+        .add_plugins((MenuPlugin, MapPlugin))
         .add_systems(Startup, setup)
+        // Run game
         .run();
 }
 
-fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
+// Setup just does camera now...
+fn setup(mut commands: Commands) {
     commands.spawn(Camera2dBundle::default());
-    // text
-    commands.spawn(SpriteBundle {
-        sprite: Sprite {
-            color: Color::rgb(0., 0.47, 1.),
-            custom_size: Some(Vec2::new(1., 1.)),
-            ..default()
-        },
-        ..default()
-    });
 }

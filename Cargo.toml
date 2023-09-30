@@ -66,7 +66,8 @@ rand_distr = "0.4.3"
 rand_core = "0.6.4"
 log = "0.4.14"
 flexi_logger = "0.27.0"
-
+noise = "0.8"
+bevy_ecs_tilemap = "0.11.0"
 [dependencies.xxhash-rust]
 version = "0.8.5"
 features = ["xxh3", "const_xxh3"]
