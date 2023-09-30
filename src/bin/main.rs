@@ -34,7 +34,7 @@ fn main() {
                 ..default()
             }),
             ..default()
-        }))
+        }).set(ImagePlugin::default_nearest()))
         .add_plugins(EntropyPlugin::<Xoshiro128StarStar>::with_seed(seed))
         .add_plugins(WorldInspectorPlugin::new())
         .add_state::<GameState>()
